@@ -28,7 +28,7 @@
 <script type="importmap">
 {
   "imports": {
-    "three": "js/three.module.js",
+    "three": "/js/three.module.js",
     "three/addons/": "../../examples/jsm/"
   }
 }
@@ -37,9 +37,9 @@
 <script type="module">
 import * as THREE from 'https://unpkg.com/three@0.142.0/build/three.module.js';
   
-import {OrbitControls} from 'js/OrbitControls.js';
-import {OBJLoader} from 'js/OBJLoader.js';
-import {MTLLoader} from 'js/MTLLoader.js';
+import {OrbitControls} from '/js/OrbitControls.js';
+import {OBJLoader} from '/js/OBJLoader.js';
+import {MTLLoader} from '/js/MTLLoader.js';
 
 function main() {
   const canvas = document.querySelector('#c');
