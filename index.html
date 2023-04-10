@@ -28,7 +28,7 @@
 <script type="importmap">
 {
   "imports": {
-    "three": "../../build/three.module.js",
+    "three": "js/three.module.js",
     "three/addons/": "../../examples/jsm/"
   }
 }
@@ -83,7 +83,7 @@ function main() {
 
   {
     const skyColor = 0xB1E1FF;  // light blue
-    const groundColor = 0xB97A20;  // brownish orange
+    const groundColor = 0x000000;  // brownish orange
     const intensity = 1;
     const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
     scene.add(light);
@@ -100,11 +100,11 @@ function main() {
 
   {
     const mtlLoader = new MTLLoader();
-    mtlLoader.load('resources/models/windmill/windmill.mtl', (mtl) => {
+    mtlLoader.load('images/mascot_allblack.mtl', (mtl) => {
       mtl.preload();
       const objLoader = new OBJLoader();
       objLoader.setMaterials(mtl);
-      objLoader.load('resources/models/windmill/windmill.obj', (root) => {
+      objLoader.load('images/mascot_allblack.obj', (root) => {
         scene.add(root);
       });
     });
